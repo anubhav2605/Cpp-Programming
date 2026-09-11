@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numbers[5] = {10, 45, 23, 78, 56};
+
+    int largest = numbers[0];
+    int secondLargest = numbers[0];
+
+    for (int i = 1; i < 5; i++) {
+        if (numbers[i] > largest) {
+            secondLargest = largest;
+            largest = numbers[i];
+        }
+        else if (numbers[i] > secondLargest && numbers[i] != largest) {
+            secondLargest = numbers[i];
+        }
+    }
+
+    cout << "Largest = " << largest << endl;
+    cout << "Second Largest = " << secondLargest << endl;
+
+    return 0;
+}
